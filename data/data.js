@@ -2,7 +2,8 @@ __PAGE_DATA__ = {
   map: {
     boundaries: {
 
-    }
+    },
+    sk: 'cGsuZXlKMUlqb2lhV2x6WVNJc0ltRWlPaUpqYW14aGFHUm1PVGN4TTI0NU0zRnhhRFF3ZW5NeVpuSXlJbjAuLWlCUHAwZUpjWWN6bGZuVFpGWXZPQQ=='
   },
   points_of_interest: {
     landmarks: [
