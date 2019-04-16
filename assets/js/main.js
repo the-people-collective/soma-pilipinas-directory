@@ -12,7 +12,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token='
 }).addTo(somaMap);
 
 // SoMA Boundaries
-L.polygon([
+var boundary = L.polygon([
   [37.789285, -122.401519],  // 2nd & Market
   [37.781838, -122.392188],  // 2nd & Brannan
   [37.769194, -122.408056],  // Division & Brannan
@@ -59,3 +59,6 @@ for (var i = 0; i < businesses.length; i++) {
   var business = businesses[i];
   setMarker(business, "Business")
 }
+
+// Add Bounds (Recenter map, if user scrolls to location outside SoMa Boundaries)
+somaMap.setMaxBounds(boundary.getBounds());
