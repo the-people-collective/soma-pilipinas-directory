@@ -52,6 +52,14 @@ for (var i = 0; i < landmarks.length; i++) {
   setMarker(landmark, 'Cultural Site')
 }
 
+// Add Organizations
+var organizations = pageData.points_of_interest.organizations;
+
+for (var i = 0; i < organizations.length; i++) {
+  var organization = organizations[i];
+  setMarker(organization, 'Cultural Site')
+}
+
 // Add Businesses
 var businesses = pageData.points_of_interest.businesses;
 
