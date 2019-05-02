@@ -27,10 +27,11 @@ var boundary = L.polygon([
 // create function that makes markers with pop up
 var setMarker = function setMarker (point, type) {
   var metadata = point.metadata;
+  var services = !metadata.services ? 'No services defined :(' : metadata.services;
   var website = !metadata.website ? 'No website :(' : '<a href='+ metadata.website +'>' + metadata.website + '</a>';
   var address = !metadata.address ? 'No address :(' : metadata.address;
 
-  var popupContent = '<p>' + point.name + '</p>' + '<p>' + type + '</p>' + '<p>' + website + '</p>' + '<p>' + address + '</p>';
+  var popupContent = '<p>' + point.name + '</p>' + '<p>' + type + '</p>' + '<p>' + services + '</p>' + '<p>' + website + '</p>' + '<p>' + address + '</p>';
   var popupOptions = {};
   L.marker([
     point.latitude,
@@ -49,7 +50,7 @@ var landmarks = pageData.points_of_interest.landmarks;
 
 for (var i = 0; i < landmarks.length; i++) {
   var landmark = landmarks[i];
-  setMarker(landmark, 'Cultural Site')
+  setMarker(landmark, 'Landmark')
 }
 
 // Add Organizations
@@ -57,7 +58,7 @@ var organizations = pageData.points_of_interest.organizations;
 
 for (var i = 0; i < organizations.length; i++) {
   var organization = organizations[i];
-  setMarker(organization, 'Cultural Site')
+  setMarker(organization, 'Organization')
 }
 
 // Add Businesses
