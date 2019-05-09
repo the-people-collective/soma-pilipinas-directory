@@ -70,4 +70,4 @@ for (var i = 0; i < businesses.length; i++) {
 }
 
 // Add Bounds (Recenter map, if user scrolls to location outside SoMa Boundaries)
-somaMap.setMaxBounds(boundary.getBounds());
+// somaMap.setMaxBounds(boundary.getBounds());
