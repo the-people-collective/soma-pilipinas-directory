@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="preload" href="assetsfonts/barlow-v3-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/space-mono-v4-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+    
     <link rel="stylesheet" type="text/css" href="assets/third-party/leaflet/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body id="soma-pilipinas-directory">
-  <h2>SoMA Pilipinas Directory</h2>
-  <p>
-    SoMA - South of Market district of San Francisco.  This is the heart of Silicon Valley
-    and also San Francisco's Filipino Historical & Cultural District.  Welcome!
-  </p>
+  <h2 class="barlow">SoMA Pilipinas Directory</h2>
+  <p class="space-mono">SoMA - South of Market district of San Francisco.</p>
+  <p class="space-mono"></p>
+    
   <div id="map" style="height: 500px"></div>
   <script src="assets/third-party/leaflet/leaflet.js"></script>
   <script src="data/data.js"></script>
